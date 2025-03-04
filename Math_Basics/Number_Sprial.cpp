@@ -12,28 +12,13 @@ int main() {
         ll x,y;
         cin>>x>>y;
         ll mi = max(x,y);
-        ll diagnol = (mi*mi)-mi+1;  //n^2-n + 1 
+        ll m = (mi*mi)-mi+1;  //n^2-n + 1 
         if(mi%2!=0){
-            if(x<y){
-                ans.push_back(diagnol+(y-x));
-            }
-            else if(y<x){
-                ans.push_back(diagnol-(x-y));
-            }
-            else{
-                ans.push_back(diagnol);
-            }
+            ans.push_back(m+(m-x)-(m-y));
+    
         }
         else{
-            if(x<y){
-                ans.push_back(diagnol-(y-x));
-            }
-            else if(y<x){
-                ans.push_back(diagnol+(x-y));
-            }
-            else{
-                ans.push_back(diagnol);
-            }
+            ans.push_back(m-(m-x)+(m-y));
         }
     }
     for(ll i=0;i<ans.size();i++){
