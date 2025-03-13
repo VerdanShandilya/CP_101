@@ -22,8 +22,10 @@ int main(){
             cin>>a;
             v.push_back(a);
         }
-        for(int i=0;i<ans.size();i++){
-            cout<<ans[i]<<" ";
+        for(int i=0;i<n;i++){
+            int num1=0;
+            int num2=0;
+            if(i%n-1==0)
         }
         cout<<endl;
     }
