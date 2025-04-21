@@ -1,0 +1,1 @@
+{"name":"Local: jellyfish","url":"c:\\Users\\acer\\OneDrive\\Desktop\\CP_101\\900rated\\jellyfish.cpp","tests":[{"id":1744811622805,"input":"2\n5 3 3\n1 1 7\n7 1 5\n1 2 5 6 8\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\acer\\OneDrive\\Desktop\\CP_101\\900rated\\jellyfish.cpp","group":"local","local":true}
