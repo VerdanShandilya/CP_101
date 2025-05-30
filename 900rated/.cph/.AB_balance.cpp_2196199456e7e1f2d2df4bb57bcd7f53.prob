@@ -1,0 +1,1 @@
+{"name":"Local: AB_balance","url":"c:\\Users\\acer\\OneDrive\\Desktop\\CP_101\\900rated\\AB_balance.cpp","tests":[{"id":1748380955512,"input":"4\nb\naabbbabaa\nabbb\nabbaab","output":"b\naabbbabaa\nbbbb\nabbaaa"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\acer\\OneDrive\\Desktop\\CP_101\\900rated\\AB_balance.cpp","group":"local","local":true}

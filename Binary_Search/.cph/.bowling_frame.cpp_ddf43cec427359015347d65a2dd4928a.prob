@@ -1,0 +1,1 @@
+{"name":"Local: bowling_frame","url":"c:\\Users\\acer\\OneDrive\\Desktop\\CP_101\\Binary_Search\\bowling_frame.cpp","tests":[{"id":1748296093599,"input":"4\n1 2\n3 2\n3 3\n12 0\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\acer\\OneDrive\\Desktop\\CP_101\\Binary_Search\\bowling_frame.cpp","group":"local","local":true}
