@@ -21,14 +21,28 @@ void helper(){
             ones++;
         }
     }
-    if(ones>zeros){
-        cout<<ones-zeros<<endl;
-    }
-    else if(ones<zeros){
-        cout<<zeros-ones<<endl;
-    }
-    else{
+    if(ones==zeros){
         cout<<0<<endl;
+        return;
+    }
+    else if(ones==0 || zeros==0){
+        cout<<s.size()<<endl;
+        return;
+    }
+    ll ans=0;
+    for(int i=0;i<s.size();i++){
+        if(s[i]=='0' && ones>0){
+            ans++;
+            ones--;
+        }
+        else if(s[i]=='1' && zeros>0){
+            ans++;
+            zeros--;
+        }
+        else{
+            cout<<s.size()-ans<<endl;
+            return;
+        }
     }
 }
 
