@@ -31,9 +31,20 @@ void helper(){
         }
     }
     string ans="";
-    ans+=cnt*o;
-    
-    
+    for(int i=0;i<cnt;i++){
+        ans+=o;
+    }
+    for(auto i : m){
+        if(i.second&1){
+            continue;
+        }
+        string sub;
+        for(int j=0;j<i.second/2;j++){
+            sub+=i.first;
+        }
+        ans=sub+ans+sub;
+    }
+    cout<<ans;
 }
 
 
