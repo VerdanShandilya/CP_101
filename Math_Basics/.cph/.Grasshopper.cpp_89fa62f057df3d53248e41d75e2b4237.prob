@@ -1,0 +1,1 @@
+{"name":"Local: Grasshopper","url":"c:\\Users\\acer\\OneDrive\\Desktop\\CP_101\\Math_Basics\\Grasshopper.cpp","tests":[{"id":1744540155952,"input":"3\n10 2\n10 3\n3 4\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\acer\\OneDrive\\Desktop\\CP_101\\Math_Basics\\Grasshopper.cpp","group":"local","local":true}

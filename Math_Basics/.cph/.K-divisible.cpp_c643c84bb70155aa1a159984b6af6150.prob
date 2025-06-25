@@ -1,0 +1,1 @@
+{"name":"Local: K-divisible","url":"c:\\Users\\acer\\OneDrive\\Desktop\\CP_101\\Math_Basics\\K-divisible.cpp","tests":[{"id":1741611983798,"input":"4\n1 5\n4 3\n8 8\n8 17\n","output":"5\n2\n1\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\acer\\OneDrive\\Desktop\\CP_101\\Math_Basics\\K-divisible.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: monters","url":"c:\\Users\\acer\\OneDrive\\Desktop\\CP_101\\1000rated\\monters.cpp","tests":[{"id":1748547411603,"input":"3\n3 2\n1 2 3\n2 3\n1 1\n4 3\n2 8 3 5","output":"2 1 3 \n1 2 \n3 1 2 4 "}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\acer\\OneDrive\\Desktop\\CP_101\\1000rated\\monters.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: Left_Max","url":"c:\\Users\\acer\\OneDrive\\Desktop\\CP_101\\recusion_backtracking\\Left_Max.cpp","tests":[{"id":1742640518737,"input":"5\n4 3 5 7 3","output":"4 4 5 7 7 "}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\acer\\OneDrive\\Desktop\\CP_101\\recusion_backtracking\\Left_Max.cpp","group":"local","local":true}
