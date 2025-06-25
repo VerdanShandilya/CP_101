@@ -6,6 +6,7 @@
 #include <cmath>
 #include <string>
 #include <unordered_map>
+#include <climits>
 using ll = long long;
 using namespace std;
 
@@ -16,38 +17,31 @@ void helper(){
     for(int i=0;i<n;i++){
         cin>>v[i];
     }
-    for(int i=0;i<n-1;i++){
-        if(v[i]==0 && v[i+1]<0){
-            v[i+1]=abs(v[i+1]);
-        }
-        else if(v[i]<0 && v[i]<0){
-            v[i]=abs(v[i]);
-        }
-        else if(v[i]<0 && v[i+1]<0){
-            v[i]=abs(v[i]);
-            v[i+1]=abs(v[i+1]);
-        }
-        else if(v[i]<0 && v[i+1]>0){
-            if(abs(v[i])>v[i+1]){
-                v[i+1]=-1*v[i+1];
-                v[i]=abs(v[i]);
-            }
-        }
-        else if(v[i]>0 && v[i+1]<0){
-            if(v[i]<abs(v[i+1])){
-                v[i]=-1*v[i];
-                v[i+1]=abs(v[i+1]);
-            }
-        }
-        else{
-            continue;
-        }
-    }
     ll sum=0;
-    for(auto i : v){
-        sum+=i;
+    ll neg=0;
+    bool zero=false;
+    for(int i=0;i<n;i++){
+        sum+=abs(v[i]);
+        if(v[i]<0){
+            neg++;
+        }
+        if(v[i]==0){
+            zero=true;
+        }
     }
-    cout<<sum<<endl;
+    if(neg==0 || neg%2==0){
+        cout<<sum<<endl;
+        return;
+    }
+    else{
+        ll mi=INT_MAX;
+        for(int i=0;i<n;i++){
+            ll num=abs(v[i]);
+            mi=min(mi,num);
+        }
+        cout<<sum-mi-mi<<endl;
+    }
+
 }
 
 int main(){

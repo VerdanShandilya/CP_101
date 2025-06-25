@@ -15,7 +15,6 @@ int main(){
         ll x=0;
         ll y=0;
         ll ma = max(a,b);
-        // if(m)
         x=a*b;
         y=x+a;
         if((y+x)%b==0){
