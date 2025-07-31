@@ -47,7 +47,6 @@ void helper(){
     cout<<ans;
 }
 
-
 int main(){
     helper();
 }

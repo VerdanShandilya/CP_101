@@ -6,26 +6,31 @@
 #include <cmath>
 #include <string>
 #include <unordered_map>
+#include <climits>
+#include <set>
 using ll = long long;
 using namespace std;
 
 void helper(){
     ll n;
     cin>>n;
-    vector<ll> v(n),b(n);
+    string s;
+    cin>>s;
+    map<char,int> freq;
+    int count=0;
+    vector<char> dis(n,0);
     for(int i=0;i<n;i++){
-        cin>>v[i];
+        freq[s[i]]++;
+        if(freq[s[i]]==1){
+            count++;
+        }
+        dis[i]=count;
     }
+    ll ans=0;
     for(int i=0;i<n;i++){
-        cin>>b[i];
+        ans+=dis[i];
     }
-    ll l=0;
-    ll r=n-1;
-    while(b[l]==v[l]) l++;
-    while(b[r]==v[r]) r--;
-    while(l>0 && b[l]>=b[l-1]) l--;
-    while(r<n-1 && b[r]<=b[r+1]) r++;
-    cout<<l+1<<" "<<r+1<<endl;
+    cout<<ans<<endl;
 }
 
 int main(){

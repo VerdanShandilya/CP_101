@@ -14,7 +14,9 @@ ll helper(int k,vector<vector<int>> &dp,vector<int> &v,int index){
 
     if(k<0)
     return 0;
-
+    if(dp[k][index]!=-1){
+        return dp[k][index];
+    }
     ll a=helper(k-v[index],dp,v,index);
     ll b=helper(k,dp,v,index+1);
     return dp[k][index]=(a+b)%mod;
@@ -23,10 +25,10 @@ ll helper(int k,vector<vector<int>> &dp,vector<int> &v,int index){
 int main(){
     ll n,k;
     cin>>n>>k;
-    vector<vector<int>> dp(k, vector<int> ());
     vector<int> v;
     for(int i=0;i<n;i++){
         cin>>v[i];
     }
-    cout<<helper(k,,v,0);
+    vector<vector<int>> dp(k, vector<int> (v.size(),-1));
+    cout<<helper(k,dp,v,0);
 }

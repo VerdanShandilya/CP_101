@@ -6,26 +6,27 @@
 #include <cmath>
 #include <string>
 #include <unordered_map>
+#include <climits>
+#include <set>
 using ll = long long;
 using namespace std;
 
 void helper(){
     ll n;
     cin>>n;
-    vector<ll> v(n),b(n);
+    vector<int> v(n);
     for(int i=0;i<n;i++){
         cin>>v[i];
     }
+    unordered_map<ll,ll> m;
     for(int i=0;i<n;i++){
-        cin>>b[i];
+        m[v[i]-i]++;
     }
-    ll l=0;
-    ll r=n-1;
-    while(b[l]==v[l]) l++;
-    while(b[r]==v[r]) r--;
-    while(l>0 && b[l]>=b[l-1]) l--;
-    while(r<n-1 && b[r]<=b[r+1]) r++;
-    cout<<l+1<<" "<<r+1<<endl;
+    ll ans=0;
+    for(auto i : m){
+        ans+=(i.second*(i.second-1))/2;
+    }
+    cout<<ans<<endl;
 }
 
 int main(){
