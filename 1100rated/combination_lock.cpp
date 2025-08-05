@@ -15,24 +15,18 @@ const int mod=1e9+7;
 
 
 void helper(){
-    multiset<int> s;
     ll n;
     cin>>n;
-    vi v(n);
-    for(int i=0;i<n;i++){
-        cin>>v[i];
+    if(n%2==0){
+        cout<<-1<<endl;
+        return;
     }
-
-    allasc(v);
-
-    for(auto i : v){
-        auto it=s.find(i-1);
-        if(it!=s.end()){
-            s.erase(it);
+    else{
+        for(int i=n;i>0;i--){
+            cout<<i<<" ";
         }
-        s.insert(i);
+        cout<<endl;
     }
-    cout<<s.size()<<endl;
 }
 
 int main(){
