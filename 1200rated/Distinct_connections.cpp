@@ -14,33 +14,37 @@ using namespace std;
 const int mod=1e9+7;
 
 void helper(){
-    ll n,m;
-    cin>>n>>m;
-    vll v(n);
-    vll u(m);
+    ll n;
+    cin>>n;
+    vi v(n);
     for(int i=0;i<n;i++){
         cin>>v[i];
     }
-    for(int i=0;i<m;i++){
-        cin>>u[i];
-    }
-    vll prefix(n);
-    vll prefixsum(n);
-    prefix[0]=v[0];
-    prefixsum[0]=v[0];
-    for(int i=1;i<n;i++){
-        prefix[i]=max(prefix[i-1],v[i]);
-        prefixsum[i]=prefixsum[i-1]+v[i];
-    }
-    for(int i=0;i<m;i++){
-        int ind=upper_bound(all(prefix),u[i])-prefix.begin();
-        if(ind==0){
-            cout<<0<<" ";
-            continue;
+    int firstnum=v[0];
+    int secondnum=-1;
+    int index=0;
+    for(int i=0;i<n;i++){
+        if(v[i]!=firstnum){
+            secondnum=v[i];
+            index=i;
+            break;
         }
-        cout<<prefixsum[ind-1]<<" ";
     }
-    cout<<endl;
+    if(secondnum==-1){
+        cout<<"NO"<<endl;
+        return;
+    }
+    cout<<"YES"<<endl;
+    for(int i=0;i<n;i++){
+        if(v[i]!=firstnum){
+            cout<<1<<" "<<i+1<<endl;
+        }
+    }
+    for(int i=1;i<n;i++){
+        if(v[i]==firstnum){
+            cout<<index+1<<" "<<i+1<<endl;
+        }
+    }
 }
 
 int main(){

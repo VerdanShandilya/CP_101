@@ -14,33 +14,27 @@ using namespace std;
 const int mod=1e9+7;
 
 void helper(){
-    ll n,m;
-    cin>>n>>m;
-    vll v(n);
-    vll u(m);
+    ll n,k;
+    cin>>n>>k;
+    vi v(n);
     for(int i=0;i<n;i++){
         cin>>v[i];
     }
-    for(int i=0;i<m;i++){
-        cin>>u[i];
-    }
-    vll prefix(n);
-    vll prefixsum(n);
-    prefix[0]=v[0];
-    prefixsum[0]=v[0];
-    for(int i=1;i<n;i++){
-        prefix[i]=max(prefix[i-1],v[i]);
-        prefixsum[i]=prefixsum[i-1]+v[i];
-    }
-    for(int i=0;i<m;i++){
-        int ind=upper_bound(all(prefix),u[i])-prefix.begin();
-        if(ind==0){
-            cout<<0<<" ";
-            continue;
+    int ans=0;
+    int l=v[0]-k;
+    int r=v[0]+k;
+    for(int i=0;i<n;i++){
+        int tl=v[i]-k;
+        int tr=v[i]+k;
+        l=max(l,tl);
+        r=min(r,tr);
+        if(l>r){
+            ans++;
+            l=tl;
+            r=tr;
         }
-        cout<<prefixsum[ind-1]<<" ";
     }
-    cout<<endl;
+    cout<<ans<<endl;
 }
 
 int main(){
