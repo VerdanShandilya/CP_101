@@ -16,28 +16,20 @@ const int mod=1e9+7;
 void helper(){
     ll n;
     cin>>n;
-    unordered_map<int,vector<int>> m;
+    unordered_map<int,int> m;
     vi v(n);
     for(int i=0;i<n;i++){
         cin>>v[i];
         
     }
     for(int i=0;i<n;i++){
-        m[v[i]].push_back(i+1);
+        m[i]=v[i];
     }
     ll sum=accumulate(all(v),0LL);
     vector<int> ans;
     ll res=0;
-    set<int> s;
     vector<int> temp;
     for(int i=0;i<n;i++){
-        if(s.count(v[i])){
-            continue;
-        }
-        else{
-            s.insert(v[i]);
-            temp.push_back(v[i]);
-        }
     }
     allasc(temp);
     for(int i=temp.size()-1;i>=0;i--){
